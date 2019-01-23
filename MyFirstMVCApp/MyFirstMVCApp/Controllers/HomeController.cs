@@ -26,7 +26,7 @@ namespace MyFirstMVCApp.Controllers
         public IActionResult Results(int firstNumber, int secondNumber)
         {
             // do what we want with the numbers
-            return View(TimePerson.);
+            return View(TimePerson);
         }
     }
 }
