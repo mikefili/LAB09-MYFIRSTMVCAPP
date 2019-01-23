@@ -1,8 +1,30 @@
 ﻿body {
-    background-color: darkseagreen;
     text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#form {
+.TimeBox {
+    border: 10px solid red;
+    height: 45vw;
+    width: 35vw;
+    margin: auto;
+    line-height: 25vw;
+}
 
+.inputs {
+    width: 5vw;
+}
+
+p {
+    line-height: 1vw;
+}
+
+h1 {
+    line-height: 2vw;
+}
+
+.time {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 5vw;
+    color: red;
 }

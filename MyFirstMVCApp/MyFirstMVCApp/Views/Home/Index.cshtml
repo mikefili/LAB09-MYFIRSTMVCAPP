@@ -5,17 +5,20 @@
     <link href="~/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>This is our demo MVC sit for .NET Core</p>
+    <div class="TimeBox">
+        <h1><span class="time">TIME</span> Persons of the Year</h1>
 
-    <form method="post" class="form">
-        <label name="firstNumber">First Number</label>
-        <input type="number" name="firstNumber" />
+        <form method="post" class="form">
+            <label name="firstYear">From Year: </label>
+            <input type="number" name="firstYear" class="inputs" />
 
-        <label name="secondNumber">Second Number</label>
-        <input type="number" name="secondNumber" />
+            <label name="secondYear">To Year: </label>
+            <input type="number" name="secondYear" class="inputs" />
 
-        <button type="submit">SUMBIT!</button>
-    </form>
+            <button type="submit">SUMBIT!</button>
+        </form>
+
+        <p>Which years will YOU choose?</p>
+    </div>
 </body>
 </html>

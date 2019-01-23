@@ -18,15 +18,16 @@ namespace MyFirstMVCApp.Controllers
 
         [HttpPost]
 
-        public IActionResult Index(int firstNumber, int secondNumber)
+        public IActionResult Index(int firstYear, int secondYear)
         {
-            return RedirectToAction("Results", new { firstNumber, secondNumber});
+            return RedirectToAction("Results", new { firstYear, secondYear});
         }
 
-        public IActionResult Results(int firstNumber, int secondNumber)
+        public IActionResult Results(int firstYear, int secondYear)
         {
             // do what we want with the numbers
-            return View(TimePerson);
+            return View();
+            // return View(TimePerson.GetPersons(firstYear, secondYear));
         }
     }
 }
