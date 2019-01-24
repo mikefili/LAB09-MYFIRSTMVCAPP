@@ -32,8 +32,8 @@ namespace MyFirstMVCApp.Models
                 string[] columns = item.Split(',');
                 TimePerson person = new TimePerson();
                 person.Year = Convert.ToInt32(columns[0]);
-                person.Name = columns[1];
-                person.Category = columns[2];
+                person.Honor = columns[1];
+                person.Name = columns[2];
                 timePeople.Add(person);
             }
 
@@ -44,7 +44,7 @@ namespace MyFirstMVCApp.Models
             // THEN do the LINQ query (with Lambda) to filter
 
 
-            List<TimePerson> listOfPeople = timePeople.Where(person => (person.Year >= begYear) && (person.Year <= endYear)).ToList();
+            List<TimePerson> listOfPeople = timePeople.Where(p => (p.Year >= begYear) && (p.Year <= endYear)).ToList();
             return timePeople;
         }
     }
