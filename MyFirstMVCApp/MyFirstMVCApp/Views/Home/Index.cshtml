@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page!</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="TimeBox">
+        <h1><span class="time">TIME</span> Persons of the Year</h1>
+
+        <form method="post" class="form">
+            <label name="begYear" class="yearLabels">From Year: </label>
+            <input name="begYear" type="number" class="inputs" required/>
+
+            <label name="endYear" class="yearLabels">To Year: </label>
+            <input name="endYear" type="number" class="inputs" required/>
+            <div>
+                <button type="submit">SEARCH</button>
+            </div>
+        </form>
+
+        <p>Which years will YOU choose?</p>
+    </div>
+</body>
+</html>
