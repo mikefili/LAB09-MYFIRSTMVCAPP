@@ -6,10 +6,10 @@ Use this web application to view the Time Magazine Person of the Year for any ye
 ## Demo
 
 ### Landing Page
-![Landing Page](/Assets/landing_page.png)
+![Landing Page](./Assets/landing_page.png)
 
 ### Sample Input
-![Sample Input](/Assets/input.png)
+![Sample Input](./Assets/input.png)
 
 ### Results Page
-![Results Page](/Assets/results.png)
+![Results Page](./Assets/results.png)
