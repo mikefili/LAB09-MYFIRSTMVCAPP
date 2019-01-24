@@ -4,6 +4,7 @@
 <html>
 <head>
     <title>Results</title>
+    <link href="~/ResultsStyles.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Your People Are...</h1>
@@ -14,6 +15,12 @@
                 <th>Year</th>
                 <th>Honor</th>
                 <th>Name</th>
+                <th>Country</th>
+                <th>Born</th>
+                <th>Died</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Context</th>
             </tr>
         </thead>
 
@@ -23,6 +30,12 @@
             <td>@item.Year</td>
             <td>@item.Honor</td>
             <td>@item.Name</td>
+            <td>@item.Country</td>
+            <td>@item.BirthYear</td>
+            <td>@item.DeathYear</td>
+            <td>@item.Title</td>
+            <td>@item.Category</td>
+            <td>@item.Context</td>
         </tr>
         }
     </table>

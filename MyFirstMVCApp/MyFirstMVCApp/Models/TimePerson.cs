@@ -29,11 +29,17 @@ namespace MyFirstMVCApp.Models
             List<TimePerson> timePeople = new List<TimePerson>();
             foreach (var item in csvData)
             {
-                string[] columns = item.Split(',');
+                string[] data = item.Split(',');
                 TimePerson person = new TimePerson();
-                person.Year = Convert.ToInt32(columns[0]);
-                person.Honor = columns[1];
-                person.Name = columns[2];
+                person.Year = Convert.ToInt32(data[0]);
+                person.Honor = (data[1] == "" ? "N/A" : data[1]);
+                person.Name = (data[2] == "" ? "N/A" : data[2]);
+                person.Country = (data[3] == "" ? "N/A" : data[3]);
+                person.BirthYear = (data[4] == "" ? 0 : Convert.ToInt32(data[4]));
+                person.DeathYear = (data[5] == "" ? 0 : Convert.ToInt32(data[5]));
+                person.Title = (data[6] == "" ? "N/A" : data[6]);
+                person.Category = (data[7] == "" ? "N/A" : data[7]);
+                person.Context = (data[8] == "" ? "N/A" : data[8]);
                 timePeople.Add(person);
             }
 
@@ -44,8 +50,8 @@ namespace MyFirstMVCApp.Models
             // THEN do the LINQ query (with Lambda) to filter
 
 
-            List<TimePerson> listOfPeople = timePeople.Where(p => (p.Year >= begYear) && (p.Year <= endYear)).ToList();
-            return timePeople;
+            List<TimePerson> listOfPeople = timePeople.Where(person => (person.Year >= begYear) && (person.Year <= endYear)).ToList();
+            return listOfPeople;
         }
     }
 }

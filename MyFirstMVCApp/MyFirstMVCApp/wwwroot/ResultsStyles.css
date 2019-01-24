@@ -1,0 +1,40 @@
+﻿body {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #f0f3f5;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 5vw;
+}
+
+table {
+    background-color: white;
+    margin: 5vw auto;
+}
+
+thead th {
+    background-image: linear-gradient(red, darkred);
+    font-size: 1vw;
+    font-weight: 400;
+    color: #fff;
+    padding: 1vw;
+}
+
+tbody tr td {
+    font-weight: 400;
+    color: #5f6062;
+    font-size: 0.85vw;
+    padding: 1vw;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:nth-child(2n) {
+    background: #f0f3f5;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
