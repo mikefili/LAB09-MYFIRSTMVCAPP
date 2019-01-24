@@ -1,6 +1,13 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css?family=Lora');
+
+body {
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2vw;
+    background-image: url(covers.jpg);
+    background-size: contain;
+    background-position: center;
+    overflow: hidden;
 }
 
 .TimeBox {
@@ -8,11 +15,18 @@
     height: 45vw;
     width: 35vw;
     margin: auto;
-    line-height: 25vw;
+    line-height: 15vw;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.yearLabels {
+    font-size: 1.5vw;
 }
 
 .inputs {
     width: 5vw;
+    height: 2vw;
+    line-height: 2vw;
 }
 
 p {
@@ -20,11 +34,27 @@ p {
 }
 
 h1 {
-    line-height: 2vw;
+    line-height: 5vw;
+    font-size: 2vw;
 }
 
 .time {
-    font-family:'Times New Roman', Times, serif;
-    font-size: 5vw;
+    font-family: 'Lora', serif;
+    font-size: 12vw;
+    line-height: 12vw;
     color: red;
+}
+
+button {
+    background-color: red;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0.5vw;
+    height: 3vw;
+    width: 8vw;
+    font-size: 1.5vw;
+}
+
+button:hover {
+    background-color: rgba(255, 0, 0, 0.5);
 }

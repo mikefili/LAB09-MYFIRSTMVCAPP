@@ -18,24 +18,34 @@ namespace MyFirstMVCApp.Models
         public string Category { get; set; }
         public string Context { get; set; }
 
-        //public static List<TimePerson> GetPersons(int begYear, int endYear)
-        //{
-        //    //read in the file
-        //    //File.ReadAllLines (in an array)
-        //    string path = "C:/Users/Owner/codefellows/401/labs/Lab09-MyFirstMVCApp/MyFirstMVCApp/MyFirstMVCApp/wwwroot/personOfTheYear";
-        //    File.ReadAllLines(path);
+        public static List<TimePerson> GetPersons(int begYear, int endYear)
+        {
+            //read in the file
+            //File.ReadAllLines (in an array)
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../wwwroot/personOfTheYear.csv");
+            var csvData = File.ReadAllLines(path).Skip(1);
 
-        //    // iterate through that array and set the values appropriately to a new TimePerson Object
+            // iterate through that array and set the values appropriately to a new TimePerson Object
+            List<TimePerson> timePeople = new List<TimePerson>();
+            foreach (var item in csvData)
+            {
+                string[] columns = item.Split(',');
+                TimePerson person = new TimePerson();
+                person.Year = Convert.ToInt32(columns[0]);
+                person.Name = columns[1];
+                person.Category = columns[2];
+                timePeople.Add(person);
+            }
 
-        //    // CSV is comma delimited
+            // CSV is comma delimited
 
-        //    // create the full list of people from the csv file
+            // create the full list of people from the csv file
 
-        //    // THEN do the LINQ query (with Lambda) to filter
+            // THEN do the LINQ query (with Lambda) to filter
 
 
-        //    List<TimePerson> listOfPeople = people.Where(p => (p.Year >= begYear) && (p.Year <= endYear)).ToList();
-        //    return listOfPeople;
-        //}
+            List<TimePerson> listOfPeople = timePeople.Where(person => (person.Year >= begYear) && (person.Year <= endYear)).ToList();
+            return timePeople;
+        }
     }
 }

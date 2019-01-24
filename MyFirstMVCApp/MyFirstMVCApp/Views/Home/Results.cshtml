@@ -4,15 +4,23 @@
 <html>
 <head>
     <title>Results</title>
-    <link href="~/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>RESULTS OF DATA</h1>
+    <h1>Your People Are...</h1>
 
-    @foreach (var item in Model) // not strongly typed w/ Razor
-    {
-    <h3>@item.Name</h3>
-    <h3>@item.Category</h3>
-    }
+    <table>
+        <thead>
+            <tr>
+                <th>Year</th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Year</td>
+        </tr>
+        }
+    </table>
 </body>
 </html>

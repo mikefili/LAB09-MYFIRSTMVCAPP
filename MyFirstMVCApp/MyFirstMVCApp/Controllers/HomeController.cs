@@ -26,8 +26,7 @@ namespace MyFirstMVCApp.Controllers
         public IActionResult Results(int firstYear, int secondYear)
         {
             // do what we want with the numbers
-            return View();
-            // return View(TimePerson.GetPersons(firstYear, secondYear));
+            return View(TimePerson.GetPersons(firstYear, secondYear));
         }
     }
 }
